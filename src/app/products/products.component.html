@@ -37,3 +37,7 @@
     </div>
 </div>
 
+<div *ngIf="filteredProducts.length == 0" class="alert alert-danger" role="alert">
+    <strong>Ningún producto concuerda con la búsqueda</strong>
+</div>
+
