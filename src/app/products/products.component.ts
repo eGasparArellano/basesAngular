@@ -48,8 +48,7 @@ export class ProductsComponent implements OnInit {
         return 0;
       });
     }
-    
-    
+
     this.filteredProducts = this.filteredProducts.filter((product) => {
       return  product.name.toUpperCase().includes(this.searchString.toUpperCase()) ||
               product.description.toUpperCase().includes(this.searchString.toUpperCase());
