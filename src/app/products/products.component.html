@@ -1,5 +1,5 @@
 <div class="form-inline d-flex">
-  <input type="text" class="form-control col-m-4" [(ngModel)]="searchString" style="width: 400px;">
+  <input type="text" class="form-control col-m-4" [(ngModel)]="searchString" (input)="searchProducts()" style="width: 400px;">
   <button class="btn btn-primary ml-3">Buscar productos</button>
 </div>
 <small class="form-text text-muted" *ngIf="searchString.length > 0">Buscando: {{searchString}}</small>
@@ -20,18 +20,18 @@
   </label>
 </div>
 
-<div class="mt-3">
+<div class="mt-3" *ngFor="let product of filteredProducts">
     <div class="border">
         <div class="container row">
             <div class="col-2">
-                <img src="https://picsum.photos/id/1/150/150" class="rounded">
+                <img src="https://picsum.photos/id/{{product.uid}}/150/150" class="rounded">
             </div>
             <div class="col-10">
-                <h5>Smartphone</h5>
-                Precio (MXN): $<br>
-                Marca:<br>
-                Descripción:<br>
-                Existencia:<br>  
+                <h5>{{product.name}}</h5>
+                Precio (MXN): ${{product.price}}<br>
+                Marca: {{product.brand}}<br>
+                Descripción: {{product.description}}<br>
+                Existencia: {{product.quantity}}<br>  
             </div>
         </div>
     </div>

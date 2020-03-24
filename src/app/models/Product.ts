@@ -1,16 +1,16 @@
 export class Product {
     uid: number;
-    nombre: string;
-    marca: string;
-    descripcion: string;
-    precio: number;
-    existencia: number;
-    constructor(uid, nombre, marca, descripcion, precio, existencia) {
+    name: string;
+    brand: string;
+    description: string;
+    price: number;
+    quantity: number;
+    constructor(uid, name, brand, description, price, quantity) {
         this.uid = uid;
-        this.nombre = nombre;
-        this.marca = marca;
-        this.descripcion = descripcion;
-        this.precio = precio;
-        this.existencia = existencia;
+        this.name = name;
+        this.brand = brand;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
     }
 }
